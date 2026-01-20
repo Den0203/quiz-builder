@@ -85,6 +85,14 @@ http://localhost:3000
 
 ---
 
+## Code Quality
+
+ESLint and Prettier are configured for basic code quality checks and consistent formatting.
+
+Some rules are intentionally relaxed to allow faster development and focus on core functionality for this assignment.
+
+---
+
 ## Notes
 
 - Environment variables are not committed to the repository
