@@ -7,7 +7,7 @@ export class QuizzesService {
   constructor(private readonly prisma: PrismaService) {}
 
   async create(dto: CreateQuizDto) {
-    return this.prisma.quiz.create({
+    return await this.prisma.quiz.create({
       data: {
         title: dto.title,
         questions: {
@@ -35,14 +35,14 @@ export class QuizzesService {
   }
 
   async findOne(id: number) {
-    return this.prisma.quiz.findUnique({
+    return await this.prisma.quiz.findUnique({
       where: { id },
       include: { questions: true },
     });
   }
 
   async remove(id: number) {
-    return this.prisma.quiz.delete({
+    return await this.prisma.quiz.delete({
       where: { id },
     });
   }

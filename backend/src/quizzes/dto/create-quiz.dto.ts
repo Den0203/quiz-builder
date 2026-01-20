@@ -14,7 +14,7 @@ export enum QuestionType {
   CHECKBOX = "CHECKBOX",
 }
 
-class CreateQuestionDto {
+export class CreateQuestionDto {
   @IsString()
   @IsNotEmpty()
   title: string;
@@ -27,7 +27,7 @@ class CreateQuestionDto {
   options?: string[];
 
   @IsNotEmpty()
-  correctAnswer: any;
+  correctAnswer: boolean | string | string[];
 }
 
 export class CreateQuizDto {
